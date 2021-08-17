@@ -1,0 +1,8 @@
+{
+  "name": "hng-resume",
+  "version": "1.0.0",
+  "description": "A HNG Task",
+  "main": "index.js",
+  "author": "Temitope Adebayo",
+  "license": "MIT"
+}
