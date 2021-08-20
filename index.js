@@ -14,6 +14,7 @@ app.get("/", function (req, res){
 });
 
 app.post('/contact', (req, res) => {
+    res.send('Form Sent!')
 
     // Instantiate the SMTP server
     const smtpTrans = nodemailer.createTransport({
