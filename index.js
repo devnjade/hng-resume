@@ -1,7 +1,7 @@
 require('dotenv').config()
 const express = require('express')
 const app = express()
-const PORT = 3000 || process.env.PORT
+const port = 3000 || process.env.PORT
 const nodemailer = require('nodemailer')
 
 
@@ -32,7 +32,7 @@ app.post('/contact', (req, res) => {
   
     // Specify what the email will look like
     const mailOpts = {
-      from: 'Your sender info here', // This is ignored by Gmail
+      from: `${req.body.name}`, // This is ignored by Gmail
       to: process.env.GMAIL_USER,
       subject: 'New message from contact form at tylerkrys.ca',
       text: `${req.body.name} (${req.body.email}) says: ${req.body.message}`
@@ -50,4 +50,4 @@ app.post('/contact', (req, res) => {
   })
 
 
-app.listen(port, () => console.log(`Example app listening on http://localhost:${PORT}`))
+app.listen(port, () => console.log(`Example app listening on http://localhost:${port}`))
