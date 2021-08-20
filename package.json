@@ -4,5 +4,17 @@
   "description": "A HNG Task",
   "main": "index.js",
   "author": "Temitope Adebayo",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.7",
+    "nodemailer": "^6.6.3",
+    "nodemailer-mailgun-transport": "^2.1.3",
+    "nodemon": "^2.0.12"
+  }
 }
