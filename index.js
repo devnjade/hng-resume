@@ -1,7 +1,7 @@
 require('dotenv').config()
 const express = require('express')
 const app = express()
-const port = 3000 || PORT
+const PORT = 3000 || process.env.PORT
 const nodemailer = require('nodemailer')
 
 
@@ -50,4 +50,4 @@ app.post('/contact', (req, res) => {
   })
 
 
-app.listen(port, () => console.log(`Example app listening on http://localhost:${port}`))
+app.listen(port, () => console.log(`Example app listening on http://localhost:${PORT}`))
